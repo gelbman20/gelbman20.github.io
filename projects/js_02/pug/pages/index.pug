@@ -1,0 +1,24 @@
+extends  ../_skeleton
+
+block variables
+  - var pageName = 'Home'
+
+block page
+  section.section-lg
+    .container
+      h1 Введите число что бы проверить
+      ul
+        li Равно ли оно нулю ?
+        li Может меньше нуля ?
+        li А может больше нуля ?
+      p Или мы это сделаем за тебя (хе хе)
+      .row
+        .col-4
+          .input-group.mb-3
+            .input-group-prepend
+              span#basic-addon1.input-group-text #
+            input#form-control.form-control(type='text', placeholder='Input number', value='0' aria-label='Input number', aria-describedby='basic-addon1')
+            button#btn.btn.btn-primary(type='button') Confirm
+      .col-12
+        h2 Результат
+        #result.result

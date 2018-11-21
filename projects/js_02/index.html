@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="section-lg">
+        <div class="container">
+          <h1>Введите число что бы проверить</h1>
+          <ul>
+            <li>Равно ли оно нулю ?</li>
+            <li>Может меньше нуля ?</li>
+            <li>А может больше нуля ?</li>
+          </ul>
+          <p>Или мы это сделаем за тебя (хе хе)</p>
+          <div class="row">
+            <div class="col-4">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">#</span></div>
+                <input class="form-control" id="form-control" type="text" placeholder="Input number" value="0" aria-label="Input number" aria-describedby="basic-addon1">
+                <button class="btn btn-primary" id="btn" type="button">Confirm</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <h2>Результат</h2>
+            <div class="result" id="result"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
