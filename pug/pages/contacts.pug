@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+block variables
+	- var activeCategory = 'contacts'
+	- var pageName = 'Contacts'
+
+block page 
+	// Page Header
+	include ../sections/_header-classic
+
+	+breadcrumbs({
+		category: activeCategory,
+		path: [pageName],
+		bgImage: 'http://media1.mennwa.com/2015/12/slide-corporate-hosting.jpg'
+	})
+
+	// Mailform
+	section.section.section-md
+		.container
+			// RD Mailform
+			form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+				.form-wrap
+					label.form-label.form-label-outside(for="contact-name") Name
+					input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+				.form-wrap
+					label.form-label.form-label-outside(for="contact-phone") Phone
+					input#contact-phone.form-input(type="text" name="phone" data-constraints='@Required @PhoneNumber')
+				.form-wrap
+					label.form-label.form-label-outside(for="contact-email") E-Mail
+					input#contact-email.form-input(type="email" name="email" data-constraints='@Required @Email')
+				.form-wrap
+					label.form-label.form-label-outside(for="contact-message") Message
+					textarea#contact-message.form-input(name="message" data-constraints='@Required')
+				//Google captcha
+				.form-wrap.text-left.form-validation-left
+					.recaptcha#captcha1(data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt")
+				.form-button.group-sm.text-center.text-lg-left
+					button(type="submit").button.button-primary Send
+
+	// RD Google Map
+	section.section
+		.google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-styles='[{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":60}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"lightness":30}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ef8c25"},{"lightness":40}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#b6c54c"},{"lightness":40},{"saturation":-40}]},{}]' )
+			.google-map
+			ul.google-map-markers
+				li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+
+	// Page Footer
+	include ../sections/_footer-classic
