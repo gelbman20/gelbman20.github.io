@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Auto Test Function</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Slab:700%7CRoboto:400">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <div class="navbar-main-outer">
+          <div class="navbar-main">
+            <!-- RD Navbar Panel-->
+            <div class="navbar-panel">
+              <!-- RD Navbar Brand-->
+              <div class="navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-151x25.png" alt="" width="151" height="25" srcset="images/logo-default-299x44.png 2x"/><img class="brand-logo-light" src="images/logo-inverse-151x25.png" alt="" width="151" height="25" srcset="images/logo-inverse-299x44.png 2x"/></a>
+              </div>
+            </div>
+            <div class="navbar-main-element">
+              <div class="navbar-nav-wrap">
+                <!-- RD Navbar Nav-->
+                <ul class="navbar-nav">
+                  <li class="navbar-nav-item active"><a class="navbar-nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">About</a>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Projects</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="navbar-menu navbar-dropdown">
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="auto-test-functions.html">Авто Тестируемые Функции</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Contacts</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Section Aвто-тестируемые функции с if / else-->
+      <section class="section section-lg bg-gray-100">
+        <div class="container">
+          <h2>Aвто-тестируемые функции с if / else</h2>
+          <h5>
+            <p>Раз уж мы научились выделять функции ,которые не работают c UI и которые можно покрыть автоматическими тестами - вот 2 задания какраз где нужно реализовать такие функции. Как только все красные строки станут зелеными - функция реализована.</p><a href="https://codepen.io/gerkirill/pen/zMRrwq?editors=0010">https://codepen.io/gerkirill/pen/zMRrwq?editors=0010</a><br><a href="https://codepen.io/gerkirill/pen/KrQpOy?editors=0010">https://codepen.io/gerkirill/pen/KrQpOy?editors=0010</a>
+            <p>Во второй задаче используйте <code>early returns</code> - вызывайте <code>return</code> как можно раньше в теле функции, как только есть что вернуть.</p>
+          </h5>
+          <h6>A/C: карточка с сылками на решение обоих кодпенов</h6>
+        </div>
+      </section>
+      <hr>
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <h2>Задание:</h2>
+          <h4>У прямоугольного треугольника квадрат самой длинной стороны равен сумме квадратов меньших сторон.<br>Попробуйте решить эту задачу без Math.max, используя if / else</h4>
+          <div data-right="true">5, 4, 3</div>
+          <div data-right="true">3, 5, 4</div>
+          <div data-right="false">6, 5, 4</div>
+          <div data-right="false">6, 6, 6</div>
+          <div class="row justify-content-center row-30">
+            <div class="col-lg-12">
+              <h2>Решение: </h2>
+              <p class="codepen" data-height="265" data-theme-id="dark" data-slug-hash="eQjzXe" data-default-tab="js,result" data-user="gelbman20" data-pen-title="Right Triangle">See the Pen<a href="https://codepen.io/gelbman20/pen/eQjzXe/">Right Triangle</a> by Andew (<a href="https://codepen.io/gelbman20">@gelbman20</a>) on<a href="https://codepen.io">CodePen</a>.</p>
+              <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <h2>Задание:</h2>
+          <h4>Високосный год определяется по следующему правилу:<br></h4>
+          <ul class="list list-marked">
+            <li>Год високосный, если он делится на четыре без остатка</li>
+            <li>Но если он делится на 100 без остатка, это не високосный год</li>
+            <li>Однако, если он делится без остатка на 400, это високосный год</li>
+          </ul>
+          <h4>Таким образом, 2000 г. является особым високосным годом, который бывает лишь раз в 400 лет.</h4>
+          <div data-leap="true">2000</div>
+          <div data-leap="true">2004</div>
+          <div data-leap="false">500</div>
+          <div data-leap="false">1983</div>
+          <div class="row row-30">
+            <div class="col-lg-12">
+              <h2>Решение:</h2>
+              <p class="codepen" data-height="265" data-theme-id="dark" data-slug-hash="oQMzjO" data-default-tab="html,result" data-user="gelbman20" data-pen-title="Leap Year">See the Pen<a href="https://codepen.io/gelbman20/pen/oQMzjO/">Leap Year</a> by Andew (<a href="https://codepen.io/gelbman20">@gelbman20</a>) on<a href="https://codepen.io">CodePen</a>.</p>
+              <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Footer-->
+      <footer class="section footer-classic context-dark">
+        <div class="container">
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Gel Learn {JS}</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/auto-test-functions.js"></script>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

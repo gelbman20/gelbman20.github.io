@@ -51,9 +51,11 @@ $body-color: $gray-500;
 $theme-colors: ();
 
 // Accent colors
-$primary: #f8dc3d;
+$primary: #fb8957;
 $danger-color: #f5543f;
 $success-color: #98bf44;
+
+$secondary: #ffdf61;
 
 // Theme colors
 $black-invariable: #000000;
@@ -202,8 +204,8 @@ $code-bg: $gray-100;
 //
 $link-color: $primary;
 $link-decoration: none;
-$link-hover-color: darken($link-color, 15%);
-$link-press-color: darken($link-color, 15%);
+$link-hover-color: $secondary;
+$link-press-color: $secondary;
 $link-hover-decoration: underline;
 
 // Z-index master list
@@ -229,12 +231,12 @@ $zindex-layout-panel: 1100;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 $grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px,
-	xxl: 1600px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
 );
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -247,10 +249,10 @@ $screen-fullhd: 1600px;
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-	sm: 540px,
-	md: 720px,
-	lg: 960px,
-	xl: 1200px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
 );
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -325,8 +327,8 @@ $form-input-padding-vertical: round(($form-input-height - $form-input-line-heigh
 $form-input-padding: $form-input-padding-vertical $form-input-padding-horizontal;
 
 @if ($form-input-border != none) {
-	$form-input-padding-vertical: round(($form-input-height - $form-input-line-height - (nth($form-input-border, 1) * 2)) / 2);
-	$form-input-padding: $form-input-padding-vertical $form-input-padding-horizontal;
+  $form-input-padding-vertical: round(($form-input-height - $form-input-line-height - (nth($form-input-border, 1) * 2)) / 2);
+  $form-input-padding: $form-input-padding-vertical $form-input-padding-horizontal;
 }
 
 $form-textarea-default-height: 135px;

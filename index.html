@@ -11,99 +11,52 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
-      </div>
-    </div>
     <div class="page">
       <!-- Page Header-->
       <header class="section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!-- RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!-- RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-151x25.png" alt="" width="151" height="25" srcset="images/logo-default-299x44.png 2x"/><img class="brand-logo-light" src="images/logo-inverse-151x25.png" alt="" width="151" height="25" srcset="images/logo-inverse-299x44.png 2x"/></a>
-                  </div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <!-- RD Navbar Nav-->
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="projects.html">Projects</a>
-                        <!-- RD Navbar Dropdown-->
-                        <ul class="rd-menu rd-navbar-dropdown">
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="projects/js_01/index.html">JS 01</a></li>
-                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="projects/js_02/index.html">JS 02</a></li>
-                        </ul>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+        <div class="navbar-main-outer">
+          <div class="navbar-main">
+            <!-- RD Navbar Panel-->
+            <div class="navbar-panel">
+              <!-- RD Navbar Brand-->
+              <div class="navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-151x25.png" alt="" width="151" height="25" srcset="images/logo-default-299x44.png 2x"/><img class="brand-logo-light" src="images/logo-inverse-151x25.png" alt="" width="151" height="25" srcset="images/logo-inverse-299x44.png 2x"/></a>
               </div>
             </div>
-          </nav>
+            <div class="navbar-main-element">
+              <div class="navbar-nav-wrap">
+                <!-- RD Navbar Nav-->
+                <ul class="navbar-nav">
+                  <li class="navbar-nav-item active"><a class="navbar-nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">About</a>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Projects</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="navbar-menu navbar-dropdown">
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="auto-test-functions.html">Авто Тестируемые Функции</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Contacts</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
-      <!-- Swiper-->
-      <section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true" data-autoplay="false" data-simulate-touch="false">
-        <div class="swiper-wrapper text-center">
-          <div class="swiper-slide context-dark" data-slide-bg="https://flydango.net/wp-content/uploads/2017/04/yosh-ginsu-146177.jpg">
-            <div class="swiper-slide-caption section-md">
-              <div class="container">
-                <div class="row justify-content-lg-center">
-                  <div class="col-lg-8">
-                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Bootstrap 4</h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Bootstrap is the most popular HTML, CSS, and JS framework in the world for building responsive, mobile-first projects on the web.</p><a class="button button-primary" href="https://getbootstrap.com/docs/4.0/migration/" data-caption-animate="fadeInUp" data-caption-delay="450">Read 3 to 4 changelog</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide context-dark" data-slide-bg="https://cdn-images-1.medium.com/max/2000/1*iH-GYd4m5HvKFRZhIY1gxQ.jpeg" style="background-position: 50% 50%">
-            <div class="swiper-slide-caption section-md">
-              <div class="container">
-                <div class="row justify-content-lg-center">
-                  <div class="col-lg-8">
-                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Пуд или Gel</h1>
-                    <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Learn {JS}</p><a class="button button-primary" href="#" data-caption-animate="fadeInUp" data-caption-delay="450">Learn more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- Section About-->
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <h1>Test</h1>
         </div>
-        <!-- Swiper Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Swiper Navigation-->
-        <div class="swiper-button-prev fa-arrow-left"></div>
-        <div class="swiper-button-next fa-arrow-right"></div>
       </section>
       <!-- Page Footer-->
       <footer class="section footer-classic context-dark">
         <div class="container">
-          <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Gel Learn {JS}</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Gel Learn {JS}</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
         </div>
       </footer>
     </div>
-    <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>

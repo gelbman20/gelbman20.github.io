@@ -1,0 +1,96 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Auto Test Function'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+  
+  // Section Aвто-тестируемые функции с if / else
+  section.section.section-lg.bg-gray-100
+    .container
+      h2 Aвто-тестируемые функции с if / else
+      h5
+        p Раз уж мы научились выделять функции ,которые не работают c UI и которые можно покрыть автоматическими тестами - вот 2 задания какраз где нужно реализовать такие функции. Как только все красные строки станут зелеными - функция реализована.
+        a(href='https://codepen.io/gerkirill/pen/zMRrwq?editors=0010') https://codepen.io/gerkirill/pen/zMRrwq?editors=0010
+        br
+        a(href='https://codepen.io/gerkirill/pen/KrQpOy?editors=0010') https://codepen.io/gerkirill/pen/KrQpOy?editors=0010
+        p Во второй задаче используйте #[code early returns] - вызывайте #[code return] как можно раньше в теле функции, как только есть что вернуть.
+
+      h6 A/C: карточка с сылками на решение обоих кодпенов
+
+  hr
+
+  section.section.section-lg.bg-default
+    .container
+      h2 Задание:
+      h4 У прямоугольного треугольника квадрат самой длинной стороны равен сумме квадратов меньших сторон.
+        br
+        | Попробуйте решить эту задачу без Math.max, используя if / else
+
+      div(data-right='true') 5, 4, 3
+      div(data-right='true') 3, 5, 4
+      div(data-right='false') 6, 5, 4
+      div(data-right='false') 6, 6, 6
+
+      .row.justify-content-center.row-30
+        .col-lg-12
+          h2 Решение: 
+          p.codepen(data-height='265', data-theme-id='dark', data-slug-hash='eQjzXe', data-default-tab='js,result', data-user='gelbman20', data-pen-title='Right Triangle')
+            | See the Pen
+            a(href='https://codepen.io/gelbman20/pen/eQjzXe/') Right Triangle
+            |  by Andew (
+            a(href='https://codepen.io/gelbman20') @gelbman20
+            | ) on
+            a(href='https://codepen.io') CodePen
+            | .
+          script(async='', src='https://static.codepen.io/assets/embed/ei.js')
+
+  hr
+
+  section.section.section-lg.bg-default
+    .container
+      h2 Задание:
+      h4 Високосный год определяется по следующему правилу:
+        br
+      ul.list.list-marked
+        li Год високосный, если он делится на четыре без остатка
+        li Но если он делится на 100 без остатка, это не високосный год
+        li Однако, если он делится без остатка на 400, это високосный год
+      h4 Таким образом, 2000 г. является особым високосным годом, который бывает лишь раз в 400 лет.
+      div(data-leap='true') 2000
+      div(data-leap='true') 2004
+      div(data-leap='false') 500
+      div(data-leap='false') 1983
+
+      .row.row-30
+        .col-lg-12
+          h2 Решение:
+          p.codepen(data-height='265', data-theme-id='dark', data-slug-hash='oQMzjO', data-default-tab='html,result', data-user='gelbman20', data-pen-title='Leap Year')
+            | See the Pen
+            a(href='https://codepen.io/gelbman20/pen/oQMzjO/') Leap Year
+            |  by Andew (
+            a(href='https://codepen.io/gelbman20') @gelbman20
+            | ) on
+            a(href='https://codepen.io') CodePen
+            | .
+          script(async='', src='https://static.codepen.io/assets/embed/ei.js')
+
+
+
+
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-classic
+
+
+block scripts
+  script( src='js/auto-test-functions.js' )

@@ -1,0 +1,43 @@
+/*
+ Navbar
+*/
+
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-outer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+  }
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-nav-item {
+  position: relative;
+  display: inline-block;
+  + .navbar-nav-item {
+    margin-left: 35px;
+  }
+
+  &:hover .navbar-menu {
+    opacity: 1;
+  }
+}
+
+.navbar-menu {
+  position: absolute;
+  top: 100%;
+  width: 220px;
+  padding: 15px;
+  background-color: $white;
+  box-shadow: $shadow-area-2;
+  opacity: 0;
+  transition: .3s ease-out all;
+}

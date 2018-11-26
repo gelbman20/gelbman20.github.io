@@ -211,14 +211,14 @@ sup {
 }
 
 a {
-  color: #f8dc3d;
+  color: #fb8957;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #e0c008;
+  color: #ffdf61;
   text-decoration: underline;
 }
 
@@ -497,7 +497,7 @@ small,
 mark,
 .mark {
   padding: 5px 10px;
-  background-color: #f8dc3d;
+  background-color: #fb8957;
 }
 
 .list-unstyled {
@@ -2151,12 +2151,12 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #f8dc3d;
+  color: #fb8957;
   background-color: transparent;
 }
 
 .btn-link:hover {
-  color: #e0c008;
+  color: #ffdf61;
   text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
@@ -3648,8 +3648,8 @@ tbody.collapse.show {
 .page-item.active .page-link {
   z-index: 2;
   color: #ffffff;
-  background-color: #f8dc3d;
-  border-color: #f8dc3d;
+  background-color: #fb8957;
+  border-color: #fb8957;
 }
 
 .page-item.disabled .page-link {
@@ -3673,8 +3673,8 @@ tbody.collapse.show {
 .page-link:focus, .page-link:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #f8dc3d;
-  border-color: #f8dc3d;
+  background-color: #fb8957;
+  border-color: #fb8957;
 }
 
 .pagination-lg .page-link {
@@ -4106,7 +4106,7 @@ button.close {
   margin-left: -4px;
   content: "";
   border-width: 6px 6px 0;
-  border-top-color: #f8dc3d;
+  border-top-color: #fb8957;
 }
 
 .tooltip.bs-tooltip-right, .tooltip.bs-tooltip-auto[x-placement^="right"] {
@@ -4121,7 +4121,7 @@ button.close {
   margin-top: -4px;
   content: "";
   border-width: 6px 6px 6px 0;
-  border-right-color: #f8dc3d;
+  border-right-color: #fb8957;
 }
 
 .tooltip.bs-tooltip-bottom, .tooltip.bs-tooltip-auto[x-placement^="bottom"] {
@@ -4136,7 +4136,7 @@ button.close {
   margin-left: -4px;
   content: "";
   border-width: 0 6px 6px;
-  border-bottom-color: #f8dc3d;
+  border-bottom-color: #fb8957;
 }
 
 .tooltip.bs-tooltip-left, .tooltip.bs-tooltip-auto[x-placement^="left"] {
@@ -4152,7 +4152,7 @@ button.close {
   margin-top: -4px;
   content: "";
   border-width: 6px 0 6px 6px;
-  border-left-color: #f8dc3d;
+  border-left-color: #fb8957;
 }
 
 .tooltip-inner {
@@ -4160,7 +4160,7 @@ button.close {
   padding: 6px 10px;
   color: #ffffff;
   text-align: center;
-  background-color: #f8dc3d;
+  background-color: #fb8957;
   border-radius: 0;
 }
 

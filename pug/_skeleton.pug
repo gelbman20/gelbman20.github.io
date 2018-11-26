@@ -6,33 +6,23 @@ block variables
 
 doctype html
 html( lang='en', class=htmlClass )
-	head
-		block title
-			title= pageName
+  head
+    block title
+      title= pageName
 
-		meta( name='viewport', content='width=device-width, height=device-height, initial-scale=1.0' )
-		meta( charset='utf-8' )
+    meta( name='viewport', content='width=device-width, height=device-height, initial-scale=1.0' )
+    meta( charset='utf-8' )
 
-		link( rel='icon', href='images/favicon.ico', type='image/x-icon' )
-		link( rel='stylesheet', type='text/css', href=fonts )
-		link( rel='stylesheet', href='css/bootstrap.css' )
-		link( rel='stylesheet', href='css/fonts.css' )
-		link( rel='stylesheet', href='css/style.css' )
+    link( rel='icon', href='images/favicon.ico', type='image/x-icon' )
+    link( rel='stylesheet', type='text/css', href=fonts )
+    link( rel='stylesheet', href='css/bootstrap.css' )
+    link( rel='stylesheet', href='css/fonts.css' )
+    link( rel='stylesheet', href='css/style.css' )
 
-	body
-		include components/_ie-panel
+  body
+    .page
+      block page
 
-		.preloader
-			.preloader-body
-				.cssload-container: .cssload-speeding-wheel
-				p Loading...
-
-		.page
-			block page
-
-		#form-output-global.snackbars
-
-		script( src='js/core.min.js' )
-		script( src='js/script.js' )
-
-		if( pageName === 'Privacy Policy' )
+    block scripts
+    script( src='js/core.min.js' )
+    script( src='js/script.js' )
