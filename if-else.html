@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Home</title>
+    <title>Условный оператор if - else</title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -45,14 +45,60 @@
           </div>
         </div>
       </header>
-      <!-- Section About-->
+      <!---->
       <section class="section section-lg bg-default">
         <div class="container">
-          <h3>Выполенные задания</h3>
-          <ul class="list-ordered">
-            <li><a href="auto-test-functions.html">Авто Тестируемые Функции</a></li>
-            <li><a href="if-else.html">Условный оператор if - else</a></li>
-          </ul>
+          <h4>Задача 1</h4>
+          <p>Пользователь вводит два числа. Найти и вывести максимальное из двух чисел.</p>
+          <h4>Задача 2</h4>
+          <p>Найти максимальное из двух чисел. Учтите вариант равенства чисел</p>
+          <div class="rd-form">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="number_one">Enter Number:</label>
+                  <input class="form-input" type="text" name="number_one" value="10" id="number_one">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="number_two">Enter Number:</label>
+                  <input class="form-input" type="text" name="number_two" value="15" id="number_two">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-wrap form-wrap-no-drop">
+                  <label class="form-label-outside" for="result_numbers">Result:</label>
+                  <input class="form-input" type="text" name="result_numbers" id="result_numbers">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button button-primary button-ujarak" id="btn_compare">Начать выполнение</button>
+        </div>
+      </section>
+      <!---->
+      <section class="section section-lg bg-gray-100">
+        <div class="container">
+          <h4>Задача 3</h4>
+          <p>В первом подъезде квартиры с 1 по 20. Во втором с 21 по 48. В третьем с 49 по 90. Пользователь вводит номер квартиры. Программа должна указать в каком подъезде находится данная квартира.</p>
+          <div class="rd-form">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="number_one">Enter Number:</label>
+                  <input class="form-input" type="text" name="number_one" id="apartment_number">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-wrap form-wrap-no-drop">
+                  <label class="form-label-outside" for="result_numbers">Result:</label>
+                  <input class="form-input" type="text" name="result_numbers" id="result_apartment_number">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button button-primary button-ujarak" id="btn_apartment">Начать выполнение</button>
         </div>
       </section>
       <!-- Page Footer-->
@@ -62,6 +108,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/if-else.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>

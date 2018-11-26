@@ -105,10 +105,10 @@ html p a:hover {
 */
 body {
   font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 1.75;
   font-weight: 400;
-  color: #9b9b9b;
+  color: #2c343b;
   background-color: #ffffff;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -401,7 +401,7 @@ a[href*='tel'], a[href*='mailto'] {
 }
 
 .context-dark .box-minimal p, .bg-gray-700 .box-minimal p, .bg-primary .box-minimal p {
-  color: #9b9b9b;
+  color: #2c343b;
 }
 
 .box-counter {
@@ -1346,7 +1346,7 @@ textarea.form-input {
 .form-label,
 .form-label-outside {
   margin-bottom: 0;
-  color: #9b9b9b;
+  color: #2c343b;
   font-weight: 400;
 }
 
@@ -1706,6 +1706,14 @@ textarea.form-input {
 
 .form-lg .form-label {
   top: 30px;
+}
+
+#result_numbers {
+  pointer-events: none;
+}
+
+.form-wrap-no-drop {
+  cursor: no-drop;
 }
 
 /*
@@ -2657,7 +2665,7 @@ html [class*='section-'].section-bottom-0 {
 
 p.rights {
   font-size: 14px;
-  color: #9b9b9b;
+  color: #2c343b;
 }
 
 p.rights a {

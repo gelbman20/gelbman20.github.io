@@ -1,0 +1,63 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Условный оператор if - else'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  //
+  section.section.section-lg.bg-default
+    .container
+      h4 Задача 1
+      p Пользователь вводит два числа. Найти и вывести максимальное из двух чисел.
+      h4 Задача 2
+      p Найти максимальное из двух чисел. Учтите вариант равенства чисел
+      .rd-form
+        .row
+          .col-lg-4
+            .form-wrap
+              label.form-label-outside(for='number_one') Enter Number:
+              input.form-input(type="text" name="number_one" value='10' id='number_one')
+
+          .col-lg-4
+            .form-wrap
+              label.form-label-outside(for='number_two' ) Enter Number:
+              input.form-input(type="text" name="number_two" value='15' id='number_two')
+
+          .col-lg-4
+            .form-wrap.form-wrap-no-drop
+              label.form-label-outside(for='result_numbers') Result:
+              input.form-input(type="text" name="result_numbers" id='result_numbers')
+      button#btn_compare.button.button-primary.button-ujarak Начать выполнение
+
+  //
+  section.section.section-lg.bg-gray-100
+    .container
+      h4 Задача 3
+      p В первом подъезде квартиры с 1 по 20. Во втором с 21 по 48. В третьем с 49 по 90. Пользователь вводит номер квартиры. Программа должна указать в каком подъезде находится данная квартира.
+      .rd-form
+        .row
+          .col-lg-4
+            .form-wrap
+              label.form-label-outside(for='number_one') Enter Number:
+              input.form-input(type="text" name="number_one" id='apartment_number')
+
+          .col-lg-4
+            .form-wrap.form-wrap-no-drop
+              label.form-label-outside(for='result_numbers') Result:
+              input.form-input(type="text" name="result_numbers" id='result_apartment_number')
+
+      button#btn_apartment.button.button-primary.button-ujarak Начать выполнение
+
+  // Page Footer
+  include ../sections/_footer-classic
+
+
+block scripts
+  script( src='js/if-else.js' )

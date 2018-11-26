@@ -14,7 +14,10 @@ block page
   // Section About
   section.section.section-lg.bg-default
     .container
-      h1 Test
+      h3 Выполенные задания
+      ul.list-ordered
+        - for (var item in menu.projects.dropdown)
+          li: a(href= menu.projects.dropdown[item].link)= menu.projects.dropdown[item].title
 
   // Page Footer
   include ../sections/_footer-classic
