@@ -1,0 +1,19 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Judgment Day'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  // Page Footer
+  include ../sections/_footer-classic
+
+
+block scripts
+  script( src='js/judgment-day.js' )
