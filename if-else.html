@@ -60,57 +60,65 @@
       <!---->
       <section class="section section-lg bg-default">
         <div class="container">
-          <h4>Задача 1</h4>
-          <p>Пользователь вводит два числа. Найти и вывести максимальное из двух чисел.</p>
-          <h4>Задача 2</h4>
-          <p>Найти максимальное из двух чисел. Учтите вариант равенства чисел</p>
+          <h4>Задача 1, 2</h4>
+          <p><span class="big">Описание задачи:</span> Пользователь вводит два числа. Найти и вывести максимальное из двух чисел. Учтите вариант равенства чисел
+          </p>
           <div class="rd-form">
-            <div class="row">
+            <div class="row row-30 align-items-end">
               <div class="col-lg-4">
                 <div class="form-wrap">
-                  <label class="form-label-outside" for="number_one">Enter Number:</label>
-                  <input class="form-input" type="text" name="number_one" value="10" id="number_one">
+                  <label class="form-label-outside" for="number-one">Введите первое число</label>
+                  <input class="form-input" type="text" name="number-one" id="number-one">
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="form-wrap">
-                  <label class="form-label-outside" for="number_two">Enter Number:</label>
-                  <input class="form-input" type="text" name="number_two" value="15" id="number_two">
+                  <label class="form-label-outside" for="number-two">Введите второе число</label>
+                  <input class="form-input" type="text" name="number-two" id="number-two">
                 </div>
+              </div>
+              <div class="col-lg-4">
+                <button class="button button-primary button-ujarak" id="btn-compare">Сравнить числа</button>
               </div>
               <div class="col-lg-4">
                 <div class="form-wrap form-wrap-no-drop">
-                  <label class="form-label-outside" for="result_numbers">Result:</label>
-                  <input class="form-input" type="text" name="result_numbers" id="result_numbers">
+                  <label class="form-label-outside" for="result-numbers">Результат сравнения двух чисел</label>
+                  <input class="form-input" type="text" name="result-numbers" id="result-numbers">
                 </div>
               </div>
             </div>
           </div>
-          <button class="button button-primary button-ujarak" id="btn_compare">Начать выполнение</button>
         </div>
       </section>
       <!---->
       <section class="section section-lg bg-gray-100">
         <div class="container">
           <h4>Задача 3</h4>
-          <p>В первом подъезде квартиры с 1 по 20. Во втором с 21 по 48. В третьем с 49 по 90. Пользователь вводит номер квартиры. Программа должна указать в каком подъезде находится данная квартира.</p>
+          <p><span class="big">Описание задачи:</span> В первом подъезде квартиры с 1 по 20. Во втором с 21 по 48. В третьем с 49 по 90. Пользователь вводит номер квартиры. Программа должна указать в каком подъезде находится данная квартира.
+          </p>
           <div class="rd-form">
-            <div class="row">
+            <div class="row row-30 align-items-end">
               <div class="col-lg-4">
                 <div class="form-wrap">
-                  <label class="form-label-outside" for="number_one">Enter Number:</label>
-                  <input class="form-input" type="text" name="number_one" id="apartment_number">
+                  <label class="form-label-outside" for="number-one">Введите номер квартиры:</label>
+                  <input class="form-input" type="text" name="number-one" id="apartment-number">
                 </div>
               </div>
               <div class="col-lg-4">
-                <div class="form-wrap form-wrap-no-drop">
-                  <label class="form-label-outside" for="result_numbers">Result:</label>
-                  <input class="form-input" type="text" name="result_numbers" id="result_apartment_number">
+                <button class="button button-primary button-ujarak" id="btn-apartment">Начать выполнение</button>
+              </div>
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-4"> 
+                    <div class="form-wrap form-wrap-no-drop">
+                      <label class="form-label-outside" for="result-numbers">В нам нужно в подьезд номер:</label>
+                      <input class="form-input" type="text" name="result-numbers" id="result-apartment-number">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <button class="button button-primary button-ujarak" id="btn_apartment">Начать выполнение</button>
         </div>
       </section>
       <!-- Page Footer-->

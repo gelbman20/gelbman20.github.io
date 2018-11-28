@@ -4,33 +4,36 @@ function setRandom() {
   return parseInt(Math.random() * 100);
 }
 
-let buttonsCompare = document.getElementById('btn_compare'),
-  formInputs = document.getElementsByClassName('form-input');
-
-var inputNumberOne = document.getElementById('number_one'),
-  inputNumberTwo = document.getElementById('number_two');
+var buttonsCompare = document.getElementById('btn-compare');
+var inputNumberOne = document.getElementById('number-one');
+var inputNumberTwo = document.getElementById('number-two');
 
 buttonsCompare.onclick = function () {
-  inputNumberOne = document.getElementById('number_one');
-  inputNumberTwo = document.getElementById('number_two');
+  var resultInput = document.getElementById('result-numbers');
+  inputNumberOne = document.getElementById('number-one');
+  inputNumberTwo = document.getElementById('number-two');
 
-  var result = inputNumberOne.value >= inputNumberTwo.value ? inputNumberOne.value : inputNumberTwo.value;
-  document.getElementById('result_numbers').value = result;
+  var result = inputNumberOne.value >= inputNumberTwo.value ? parseInt( inputNumberOne.value ) : parseInt( inputNumberTwo.value );
 
-  inputNumberOne.value = setRandom();
-  inputNumberTwo.value = setRandom();
+  if (result === '' || isNaN(result)) {
+    resultInput.value = 'Введите повторно Число';
+  } else {
+    resultInput.value = result;
+  }
+
+
 };
 
 //
 //=========================
 
-let buttonApartment = document.getElementById('btn_apartment');
+var buttonApartment = document.getElementById('btn-apartment');
 
 buttonApartment.onclick = function () {
-  let inputApartmentNumber = document.getElementById('apartment_number'),
-    inputApartmentNumberValue = inputApartmentNumber.value;
+  var inputApartmentNumber = document.getElementById('apartment-number');
+  var inputApartmentNumberValue = inputApartmentNumber.value;
 
-  let inputNumberResult =  document.getElementById('result_apartment_number');
+  var inputNumberResult = document.getElementById('result-apartment-number');
   inputNumberResult.value = validateRoom(inputApartmentNumberValue);
 };
 
@@ -39,12 +42,18 @@ function validateRoom(value) {
   value = parseInt(value);
 
   if (value < 1 || value > 90 || isNaN(value)) {
-    return 'Enter valid number: 1 - 90'
+    return 'Введите номер квартиры от 1 до 90 включительно'
   }
 
-  if (value <= 20 ) { return '1 Floor'; }
-  if (value <= 48 ) { return '2 Floor'; }
-  if (value <= 90 ) { return '3 Floor'; }
+  if (value <= 20) {
+    return '1';
+  }
+  if (value <= 48) {
+    return '2';
+  }
+  if (value <= 90) {
+    return '3';
+  }
 
   return value;
 }

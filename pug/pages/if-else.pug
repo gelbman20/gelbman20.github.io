@@ -26,46 +26,55 @@ block page
   //
   section.section.section-lg.bg-default
     .container
-      h4 Задача 1
-      p Пользователь вводит два числа. Найти и вывести максимальное из двух чисел.
-      h4 Задача 2
-      p Найти максимальное из двух чисел. Учтите вариант равенства чисел
+      h4 Задача 1, 2
+      p
+        span.big Описание задачи:
+        = ' '
+        | Пользователь вводит два числа. Найти и вывести максимальное из двух чисел. Учтите вариант равенства чисел
+
       .rd-form
-        .row
+        .row.row-30.align-items-end
           .col-lg-4
             .form-wrap
-              label.form-label-outside(for='number_one') Enter Number:
-              input.form-input(type="text" name="number_one" value='10' id='number_one')
+              label.form-label-outside(for='number-one') Введите первое число
+              input.form-input(type="text"  name="number-one" id='number-one')
 
           .col-lg-4
             .form-wrap
-              label.form-label-outside(for='number_two' ) Enter Number:
-              input.form-input(type="text" name="number_two" value='15' id='number_two')
-
+              label.form-label-outside(for='number-two' ) Введите второе число
+              input.form-input(type="text" name="number-two" id='number-two')
+          .col-lg-4
+            button#btn-compare.button.button-primary.button-ujarak Сравнить числа
           .col-lg-4
             .form-wrap.form-wrap-no-drop
-              label.form-label-outside(for='result_numbers') Result:
-              input.form-input(type="text" name="result_numbers" id='result_numbers')
-      button#btn_compare.button.button-primary.button-ujarak Начать выполнение
+              label.form-label-outside(for='result-numbers') Результат сравнения двух чисел
+              input.form-input(type="text" name="result-numbers" id='result-numbers')
+
 
   //
   section.section.section-lg.bg-gray-100
     .container
       h4 Задача 3
-      p В первом подъезде квартиры с 1 по 20. Во втором с 21 по 48. В третьем с 49 по 90. Пользователь вводит номер квартиры. Программа должна указать в каком подъезде находится данная квартира.
+      p
+        span.big Описание задачи:
+        = ' '
+        | В первом подъезде квартиры с 1 по 20. Во втором с 21 по 48. В третьем с 49 по 90. Пользователь вводит номер квартиры. Программа должна указать в каком подъезде находится данная квартира.
       .rd-form
-        .row
+        .row.row-30.align-items-end
           .col-lg-4
             .form-wrap
-              label.form-label-outside(for='number_one') Enter Number:
-              input.form-input(type="text" name="number_one" id='apartment_number')
-
+              label.form-label-outside(for='number-one') Введите номер квартиры:
+              input.form-input(type="text" name="number-one" id='apartment-number')
           .col-lg-4
-            .form-wrap.form-wrap-no-drop
-              label.form-label-outside(for='result_numbers') Result:
-              input.form-input(type="text" name="result_numbers" id='result_apartment_number')
+            button#btn-apartment.button.button-primary.button-ujarak Начать выполнение
 
-      button#btn_apartment.button.button-primary.button-ujarak Начать выполнение
+          .col-lg-12
+            .row
+              .col-lg-4 
+                .form-wrap.form-wrap-no-drop
+                  label.form-label-outside(for='result-numbers') В нам нужно в подьезд номер:
+                  input.form-input(type="text" name="result-numbers" id='result-apartment-number')
+
 
   // Page Footer
   include ../sections/_footer-classic

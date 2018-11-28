@@ -230,6 +230,7 @@ mark,
 .big {
   font-size: 18px;
   line-height: 1.55556;
+  font-weight: 700;
 }
 
 .lead {
@@ -1708,7 +1709,7 @@ textarea.form-input {
   top: 30px;
 }
 
-#result_numbers {
+#result-numbers {
   pointer-events: none;
 }
 
