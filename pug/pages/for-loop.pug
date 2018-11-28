@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    link(href='https://unpkg.com/mocha@5.2.0/mocha.css', rel='stylesheet')
+  body
+    #mocha
+    script(src='https://unpkg.com/chai/chai.js')
+    script(src='https://unpkg.com/mocha@5.2.0/mocha.js')
+    script.
+      mocha.setup('bdd');
+      window.assert = chai.assert;
+    script(src='js/for-loop-task.js')
+    script(src='js/for-loop-task.test.js')
+    script.
+      // mocha.allowUncaught();
+      mocha.checkLeaks();
+      mocha.run();

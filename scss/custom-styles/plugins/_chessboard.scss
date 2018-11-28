@@ -1,0 +1,32 @@
+.chessboard {
+  border: 2px black solid;
+  &-row {
+
+    display: flex;
+
+    &:nth-child(odd) {
+     .chessboard-col {
+       &:nth-child(even) {
+         background: $white;
+       }
+     }
+    }
+
+    &:nth-child(even) {
+      .chessboard-col {
+        &:nth-child(odd) {
+          background: $white;
+        }
+      }
+    }
+  }
+
+  &-col {
+    flex-grow: 1;
+    min-width: 40px;
+    min-height: 40px;
+    background: $black;
+  }
+
+  * + & { margin-top: 40px; }
+}

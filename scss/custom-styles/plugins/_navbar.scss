@@ -8,6 +8,8 @@
   align-items: center;
 
   &-outer {
+    position: relative;
+    z-index: 1;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -40,4 +42,12 @@
   box-shadow: $shadow-area-2;
   opacity: 0;
   transition: .3s ease-out all;
+}
+
+.navbar-dropdown {
+  &-link {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }

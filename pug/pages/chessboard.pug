@@ -1,0 +1,32 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Шахматная Доска'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  section.section.section-lg.bg-gray-100
+    .container
+      h2 Нарисвать Шахматною Доску :
+      .group
+        button.button.button-primary.button-ujarak( onclick='insertСhessboard(2)' ) 2x2
+        button.button.button-primary.button-ujarak( onclick='insertСhessboard(4)' ) 4x4
+        button.button.button-primary.button-ujarak( onclick='insertСhessboard(6)' ) 6x6
+        button.button.button-primary.button-ujarak( onclick='insertСhessboard(8)' ) 8x8
+        button.button.button-primary.button-ujarak( onclick='insertСhessboard(10)' ) 10x10
+
+      #chessboard.chessboard
+
+  // Page Footer
+  include ../sections/_footer-classic
+
+
+block scripts
+  script( src='js/cheesboard.js' )
+

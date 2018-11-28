@@ -591,7 +591,7 @@ html .group-custom > * {
   }
 }
 
-* + .group-sm {
+* + .group {
   margin-top: 30px;
 }
 
@@ -2935,6 +2935,8 @@ p.rights a:hover {
 }
 
 .navbar-main-outer {
+  position: relative;
+  z-index: 1;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -2967,6 +2969,39 @@ p.rights a:hover {
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: .3s ease-out all;
+}
+
+.navbar-dropdown-link {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.chessboard {
+  border: 2px black solid;
+}
+
+.chessboard-row {
+  display: flex;
+}
+
+.chessboard-row:nth-child(odd) .chessboard-col:nth-child(even) {
+  background: #ffffff;
+}
+
+.chessboard-row:nth-child(even) .chessboard-col:nth-child(odd) {
+  background: #ffffff;
+}
+
+.chessboard-col {
+  flex-grow: 1;
+  min-width: 40px;
+  min-height: 40px;
+  background: #000000;
+}
+
+* + .chessboard {
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

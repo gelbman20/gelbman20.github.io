@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Judgment Day</title>
+    <title>Шахматная Доска</title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -48,6 +48,19 @@
           </div>
         </div>
       </header>
+      <section class="section section-lg bg-gray-100">
+        <div class="container">
+          <h2>Нарисвать Шахматною Доску :</h2>
+          <div class="group">
+            <button class="button button-primary button-ujarak" onclick="insertСhessboard(2)">2x2</button>
+            <button class="button button-primary button-ujarak" onclick="insertСhessboard(4)">4x4</button>
+            <button class="button button-primary button-ujarak" onclick="insertСhessboard(6)">6x6</button>
+            <button class="button button-primary button-ujarak" onclick="insertСhessboard(8)">8x8</button>
+            <button class="button button-primary button-ujarak" onclick="insertСhessboard(10)">10x10</button>
+          </div>
+          <div class="chessboard" id="chessboard"></div>
+        </div>
+      </section>
       <!-- Page Footer-->
       <footer class="section footer-classic context-dark">
         <div class="container">
@@ -55,7 +68,7 @@
         </div>
       </footer>
     </div>
-    <script src="js/judgment-day.js"></script>
+    <script src="js/cheesboard.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
