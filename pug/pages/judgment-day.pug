@@ -11,6 +11,45 @@ block page
   // Page Header
   include ../sections/_header-classic
 
+  // Section
+  section.section.section-lg.bg-default
+    .container
+      ul.list
+        li 1. Январь - 31
+        li 2. Феварль - 28,29
+        li 3. Март - 31
+        li 4. Апрель - 30
+        li 5. Май - 31
+        li 6. Июнь - 30
+        li 7. Июль - 31
+        li 8. Август - 31
+        li 9. Сентябрь - 30
+        li 10. Октябрь - 31
+        li 11. Ноябрь - 30
+        li 12. Декабрь - 31
+      .row.row-15
+        .col-2
+          .form-wrap
+            label(for='day') Enter Day (1 - 31)
+            input#day(type='number', name='tentacles', min='1', max='31' value='28')
+        .col-2
+          .form-wrap
+            label(for='month') Enter Month (1 - 12)
+            input#month(type='number', name='tentacles', min='1', max='12' value='2')
+        .col-2
+          .form-wrap
+            label(for='year') Enter Year (2018 +)
+            input#year(type='number', name='tentacles', min='2018', max='9999999999' value='2018')
+
+        .col-12
+          button.button.button-primary.button-ujarak#btn Click
+        .col-12
+          p#answer
+
+
+
+
+
   // Page Footer
   include ../sections/_footer-classic
 

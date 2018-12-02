@@ -1,3 +1,4 @@
+// Проверка, высокосный год или нет
 function isLeapYear(year) {
   return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 
@@ -5,10 +6,8 @@ function isLeapYear(year) {
   // false - не высоксный год
 }
 
-function getJudgmentDayOfCurrentYear(year) {
-
-  var newYear = startYear;
-
+// Узнать смещение дней от судного дня 2018
+function getConfusionDay(year) {
   if (year < 2018) {
     return 'Нужен год больше или равный 2018 ))'
   }
@@ -16,7 +15,6 @@ function getJudgmentDayOfCurrentYear(year) {
   // Разница годов, что бы узнать на сколько сместить
   // Судный день (узнать день 28 или 29 Февраля)
   var differenceOfYers = year - 2018;
-
   var countYear = 2018;
 
   // Счетчик от которого будем отталкиваться
@@ -32,147 +30,186 @@ function getJudgmentDayOfCurrentYear(year) {
     }
   }
 
-  var newDayCode = counter % weak.length;
+  return counter;
+}
+
+// Заполняем днями Февраль
+function setFebruary(year) {
+  var weakCount;
+  var confusionDay = getConfusionDay(year);
+  confusionDay = confusionDay % 7;
+  var currentDay = '';
 
   if (isLeapYear(year)) {
-    newYear['Январь'][31] = weak[newDayCode];
-
-    newYear['Февраль'][28] = '';
-    newYear['Февраль'][29] = weak[newDayCode];
+    yearDefault[1][28] = weak[ (2 + confusionDay) % 7 ];
+    weakCount = weak.indexOf( yearDefault[1][28] );
   } else {
-    newYear['Январь'][31] = weak[newDayCode];
-    newYear['Февраль'][28] = weak[newDayCode];
+    yearDefault[1][27] = weak[ (2 + confusionDay) % 7 ];
+    weakCount = weak.indexOf( yearDefault[1][27] );
+  }
+
+  for (var i = yearDefault[1].length - 1; i >= 0; i--) {
+
+    yearDefault[1][i] = weak[weakCount];
+
+    --weakCount;
+    if (weakCount < 0) {
+      weakCount = 6;
+    }
   }
 }
 
+// Заполняем днями Январь
+function setJanuary() {
+  var lastDayAfterMoth = yearDefault[1][0];
+  weakCount = weak.indexOf(lastDayAfterMoth);
+  for (var i = yearDefault[0].length - 1; i >= 0; i--) {
+    --weakCount;
+
+    if (weakCount < 0) {
+      weakCount = 6;
+    }
+
+    yearDefault[0][i] = weak[weakCount];
+  }
+}
+
+// Заполняем все остольные месяца
+function setOtherMnth () {
+  for (var i = 2; i < 12; i++) {
+    var lastDayBeforeMonth = yearDefault[i-1][yearDefault[i-1].length - 1];
+    weakCount = weak.indexOf(lastDayBeforeMonth);
+
+    if (weakCount === 6) {
+      weakCount = 0;
+    } else {
+      ++weakCount;
+    }
+
+    for (var j = 0; j < yearDefault[i].length; j++) {
+
+      yearDefault[i][j] = weak[weakCount];
+
+      weakCount++;
+      if (weakCount > 6) {
+        weakCount = 0;
+      }
+    }
+  }
+}
+
+
 var weak = [
+  'Понедельник',
+  'Вторник',
   'Среда',
   'Четверг',
   'Пятница',
   'Суббота',
-  'Воскресенье',
-  'Понедельник',
-  'Вторник',
-
+  'Воскресенье'
 ];
 
-var startYear = {
-  'Январь': {
-    0: 31,
-    1: '',
-    31: 'Среда'
-  },
-  'Февраль': {
-    0: 28,
-    1: '',
-    28: 'Среда'
-  },
-  'Март': {
-    0: 31,
-    1: '',
-    31: ''
-  },
-  'Апрель': {
-    0: 30,
-    1: '',
-    30: ''
-  },
-  'Май': {
-    0: 31,
-    1: '',
-    31: ''
-  },
-  'Июнь': {
-    0: 30,
-    1: '',
-    30: ''
-  },
-  'Июль': {
-    0: 31,
-    1: '',
-    31: ''
-  },
-  'Август': {
-    0: 31,
-    1: '',
-    31: ''
-  },
-  'Сентябрь': {
-    0: 30,
-    1: '',
-    30: ''
-  },
-  'Октябрь': {
-    0: 31,
-    1: '',
-    31: ''
-  },
-  'Ноябрь': {
-    0: 30,
-    1: '',
-    30: ''
-  },
-  'Декабрь': {
-    0: 31,
-    1: '',
-    31: ''
-  },
-};
+var yearDefault = [
+  [], // 0 Январь - 31
+  [], // 1 Феварль - 28,29
+  [], // 2 Март - 31
+  [], // 3 Апрель - 30
+  [], // 4 Май - 31
+  [], // 5 Июнь - 30
+  [], // 6 Июль - 31
+  [], // 7 Август - 31
+  [], // 8 Сентябрь - 30
+  [], // 9 Октябрь - 31
+  [], // 10 Ноябрь - 30
+  [], // 11 Декабрь - 31
+];
 
-var month = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+var monthDefault= [
+  'Январь',
+  'Февраль',
+  'Март',
+  'Апрель',
+  'Май',
+  'Июнь',
+  'Июль',
+  'Август',
+  'Сентябрь',
+  'Октябрь',
+  'Ноябрь',
+  'Декабрь'
+];
+
+yearDefault[0][30] = ''; // Январь
+yearDefault[2][30] = ''; // Март
+yearDefault[3][29] = ''; // Апрель
+yearDefault[4][30] = ''; // Май
+yearDefault[5][29] = ''; // Июнь
+yearDefault[6][30] = ''; // Июль
+yearDefault[7][30] = ''; // Август
+yearDefault[8][29] = ''; // Сентябрь
+yearDefault[9][30] = ''; // Октябрь
+yearDefault[10][29] = ''; // Ноябрь
+yearDefault[11][30] = ''; // Декабрь
+
+// Получить день недели
+function getDay(day, month, year) {
+  setFebruary(year);
+  setJanuary();
+  setOtherMnth();
 
 
+  var result = yearDefault[month - 1][day - 1];
 
-// // Плсдений элимент
-// var lastItemMonth = weak.indexOf( startYear.Февраль[ startYear.Февраль['0'] ] );
-//
-// for (var i = startYear.Март["0"]; i >= 1; i--) {
-//   startYear.Март[i] = weak[ (i + lastItemMonth)  % weak.length ];
-// }
-//
-// // Плсдений элимент
-// var lastItemMonth = weak.indexOf( startYear.Март[ startYear.Март['0'] ] );
-//
-// for (var i = startYear.Апрель["0"]; i >= 1; i--) {
-//   startYear.Апрель[i] = weak[ (i + lastItemMonth)  % weak.length ];
-// }
-
-
-getJudgmentDayOfCurrentYear(2018);
-
-month.forEach(function (item, j, array) {
-
-  if (j === 1) {
-
-    var lastItemMonth = weak.indexOf(startYear[item][startYear[item]['0']]);
-
-    for (var i = startYear[item]["0"]; i >= 1; i--) {
-      startYear[item][i] = weak[(i + lastItemMonth) % weak.length];
-    }
-
-  } else if (j > 1) {
-
-    lastItemMonth = weak.indexOf(startYear[ array[ j - 1 ] ][startYear[array[ j - 1] ]['0']]);
-
-    for (var i = startYear[item]["0"]; i >= 1; i--) {
-      startYear[item][i] = weak[(i + lastItemMonth) % weak.length];
-    }
-
+  if (result === undefined) {
+    return false;
   }
 
-  console.log(item, startYear[item]);
-});
+  return result;
+}
 
+/*
+* Типа UI (стыд, позор О_о)
+*/
+var button = document.getElementById('btn');
 
+button.onclick = function () {
 
+  document.getElementById('answer').innerHTML = '';
 
+  var day = document.getElementById('day').value;
+  var month = document.getElementById('month').value;
+  var year = document.getElementById('year').value;
+  var leapYear = isLeapYear(year);
 
+  if (year < 2018) {
+    alert( 'Нужен год больше 2018 ' );
+    return false;
+  }
 
+  if ( leapYear === false && month == 2 && day > 28 ) {
+    alert( ' Это не высокосный год, тут 28 дней в Феврале ' );
+    return false;
+  }
 
+  if (month == 1 && day > 31 || month == 3 && day > 31 || month == 5 && day > 31 || month == 7 && day > 31 || month == 8 && day > 31 || month == 10 && day > 31 || month == 12 && day > 31) {
+    alert(' В этом месяце не больше 31 дня ');
+    return false;
+  }
 
+  if (month == 4 && day > 30 || month == 6 && day > 30 || month == 9 && day > 30 || month == 11 && day > 30) {
+    alert(' В этом месяце не больше 30 дней ');
+    return false;
+  }
 
+  var currentDay = getDay(day, month, year);
 
+  if (!currentDay) {
+    currentDay = 'Ошибка вычисления, попробуйте ввести другие данные';
+  }
 
+  document.getElementById('answer').innerHTML = '<p>' + day + ' ' +  monthDefault[month - 1] + ' ' + year  +  ' года это - ' +  currentDay + '</p>' +
+    '<p>' +  'Судный день:  ' + yearDefault[1][ yearDefault[1].length - 1 ]  +'</p>';
 
-
-
+  // Очишаем от 29 числа, все равно будем заного генерить все
+  yearDefault[1].pop();
+};
