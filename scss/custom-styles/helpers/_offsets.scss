@@ -9,7 +9,8 @@
 * + h5 { margin-top: 20px; }
 * + h6 { margin-top: 20px; }
 h4 + * { margin-top: 10px; }
-* + h4 { margin-top: 10px; }
+* + h4 { margin-top: 25px; }
+* + h3 { margin-top: 60px; }
 
 // Headings + Paragraph
 h2 + p,
@@ -41,9 +42,9 @@ h3 + img { margin-top: 42px; }
 
 // Media offsets
 @include media-breakpoint-up(xl) {
-	* + .rd-form { margin-top: 30px; }
-	.container + .container { margin-top: 60px; }
-	.row + .row { margin-top: 60px; }
+  * + .rd-form { margin-top: 30px; }
+  .container + .container { margin-top: 60px; }
+  .row + .row { margin-top: 60px; }
 }
 
 // Range spacing
@@ -54,5 +55,5 @@ h3 + img { margin-top: 42px; }
 .row-50 { @include grid-offset(50px); }
 
 @include media-breakpoint-up(lg) {
-	.row-md-30 { @include grid-offset(30px); }
+  .row-md-30 { @include grid-offset(30px); }
 }

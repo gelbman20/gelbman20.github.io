@@ -98,6 +98,7 @@ function setOtherMnth () {
   }
 }
 
+var startYear = 2018;
 
 var weak = [
   'Понедельник',

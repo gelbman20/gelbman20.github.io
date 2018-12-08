@@ -457,3 +457,5 @@ textarea.form-input {
 .form-wrap-no-drop {
   cursor: no-drop;
 }
+
+* + .calculator-form { margin-top: 15px; }

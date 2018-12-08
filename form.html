@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Forms</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Slab:700%7CRoboto:400">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <div class="navbar-main-outer">
+          <div class="navbar-main">
+            <!-- RD Navbar Panel-->
+            <div class="navbar-panel">
+              <!-- RD Navbar Brand-->
+              <div class="navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-151x25.png" alt="" width="151" height="25" srcset="images/logo-default-299x44.png 2x"/><img class="brand-logo-light" src="images/logo-inverse-151x25.png" alt="" width="151" height="25" srcset="images/logo-inverse-299x44.png 2x"/></a>
+              </div>
+            </div>
+            <div class="navbar-main-element">
+              <div class="navbar-nav-wrap">
+                <!-- RD Navbar Nav-->
+                <ul class="navbar-nav">
+                  <li class="navbar-nav-item active"><a class="navbar-nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">About</a>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Projects</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="navbar-menu navbar-dropdown">
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="auto-test-functions.html">Авто Тестируемые Функции</a></li>
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="if-else.html">Условный оператор if - else</a></li>
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="judgment-day.html">Судный день</a></li>
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="for-loop.html">Циклы</a></li>
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="chessboard.html">Шахматная Доска</a></li>
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="form.html">Работа с формой</a></li>
+                    </ul>
+                  </li>
+                  <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Contacts</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Section-->
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <h2>Кредитный калькулятор (рассрочка)</h2>
+          <h4>О рассрочке</h4>
+          <p>Вы можете оформить рассрочку на любую покупку</p>
+          <h4>Как это сделать </h4>
+          <ul class="list-ordered">
+            <li>Укажите сумму (минимум 1 000 грн) и количество  платежей</li>
+            <li>Следующая трата с карты свыше 1 000 грн будет оформлена в рассрочку</li>
+            <li>Первый платеж проходит со следующего месяца</li>
+          </ul>
+          <h4>Каковы условия</h4>
+          <p>1.9% от сумы покупки в месяц</p>
+          <p>Минимальное время рассрочки - 3 месяца</p>
+          <p>При досрочном погашении сниматься вся сумма комиссии</p>
+          <h3>Форма расчета</h3>
+          <div class="calculator-form">
+            <div class="row row-20 align-items-end">
+              <div class="col-md-4">
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="input-amount">Сумма рассрочки (минимум 1000 грн)</label>
+                  <input class="form-input" id="input-amount" type="number" value="1000" min="1000" name="name">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="select-number-payments">Количество месяцев</label>
+                  <select class="form-input" id="select-number-payments">
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <button class="button button-block button-primary" type="submit" onclick="setCalculate()">Рассчитать</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <p>В месяц нужно заплатить : <span class="text-primary" id="month-total">0</span> <span class="text-primary">грн</span>
+              </p>
+              <p>Месячное тело рассрочки : <span class="text-success" id="month-body">0</span> <span class="text-success">грн</span>
+              </p>
+              <p>Месячное комиссия по рассрочке : <span class="text-danger" id="month-interest">0</span> <span class="text-danger">грн</span>
+              </p>
+              <hr>
+              <p>В итоге нужно заплатить : <span class="text-success" id="total-amount">0</span> <span class="text-success">грн</span>
+              </p>
+              <p>Итоговая переплата : <span class="text-danger" id="total-overpayment">0</span> <span class="text-danger">грн</span>
+              </p>
+            </div>
+          </div>
+          <h3>Сводная таблица до 24 месяцев включительно</h3>
+          <p>Сначала используйте форму расчета</p>
+          <div class="table-custom-responsive">
+            <table class="table-custom table-custom-secondary">
+              <thead>
+                <tr>
+                  <th>Сумма</th>
+                  <th>Кол. Месяцев</th>
+                  <th>Тело кредита</th>
+                  <th>Мес. Комиссия</th>
+                  <th>Мес. Платеж</th>
+                  <th>Итоговая плата</th>
+                  <th>Итоговая переплата</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- Page Footer-->
+      <footer class="section footer-classic context-dark">
+        <div class="container">
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Gel Learn {JS}</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/form.js"></script>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

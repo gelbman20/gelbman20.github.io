@@ -1,0 +1,97 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Forms'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  // Section
+  section.section.section-lg.bg-default
+    .container
+      h2 Кредитный калькулятор (рассрочка)
+      h4 О рассрочке
+      p Вы можете оформить рассрочку на любую покупку
+      h4 Как это сделать 
+      ul.list-ordered
+        li Укажите сумму (минимум 1 000 грн) и количество  платежей
+        li Следующая трата с карты свыше 1 000 грн будет оформлена в рассрочку
+        li Первый платеж проходит со следующего месяца
+      h4 Каковы условия
+      p 1.9% от сумы покупки в месяц
+      p Минимальное время рассрочки - 3 месяца
+      p При досрочном погашении сниматься вся сумма комиссии
+
+      h3 Форма расчета
+      .calculator-form
+        .row.row-20.align-items-end
+          .col-md-4
+            .form-wrap
+              label.form-label-outside(for='input-amount') Сумма рассрочки (минимум 1000 грн)
+              input#input-amount.form-input(type='number' value='1000' min='1000' name='name')
+
+          .col-md-4
+            .form-wrap
+              label.form-label-outside(for='select-number-payments') Количество месяцев
+              select.form-input#select-number-payments
+                - for (var i = 3; i < 25; i++)
+                  option= i
+
+          .col-md-4
+            button.button.button-block.button-primary(type='submit' onclick='setCalculate()') Рассчитать
+
+      .row
+        .col-lg-12
+          p В месяц нужно заплатить :
+            =" "
+            span#month-total.text-primary 0
+            =" "
+            span.text-primary грн
+          p Месячное тело рассрочки :
+            =" "
+            span#month-body.text-success 0
+            =" "
+            span.text-success грн
+          p Месячное комиссия по рассрочке :
+            =" "
+            span#month-interest.text-danger 0
+            =" "
+            span.text-danger грн
+          hr
+          p В итоге нужно заплатить :
+            =" "
+            span#total-amount.text-success 0
+            =" "
+            span.text-success грн
+          p Итоговая переплата :
+            =" "
+            span#total-overpayment.text-danger 0
+            =" "
+            span.text-danger грн
+
+      h3 Сводная таблица до 24 месяцев включительно
+      p Сначала используйте форму расчета
+      .table-custom-responsive
+        table.table-custom.table-custom-secondary
+          thead
+            tr
+              th Сумма
+              th Кол. Месяцев
+              th Тело кредита
+              th Мес. Комиссия
+              th Мес. Платеж
+              th Итоговая плата
+              th Итоговая переплата
+          tbody#tbody
+
+  // Page Footer
+  include ../sections/_footer-classic
+
+
+block scripts
+  script( src='js/form.js' )
