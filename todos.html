@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Home</title>
+    <title>Список дел</title>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -38,7 +38,6 @@
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="judgment-day.html">Судный день</a></li>
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="for-loop.html">Циклы</a></li>
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="chessboard.html">Шахматная Доска</a></li>
-                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="form.html">Работа с формой</a></li>
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="todos.html">Список дел</a></li>
                     </ul>
                   </li>
@@ -50,19 +49,21 @@
           </div>
         </div>
       </header>
-      <!-- Section About -->
-      <section class="section section-lg bg-default">
+      <!-- Section Todos-->
+      <section class="section section-lg">
         <div class="container">
-          <h3>Выполенные задания</h3>
-          <ul class="list-ordered">
-            <li><a href="auto-test-functions.html">Авто Тестируемые Функции</a></li>
-            <li><a href="if-else.html">Условный оператор if - else</a></li>
-            <li><a href="judgment-day.html">Судный день</a></li>
-            <li><a href="for-loop.html">Циклы</a></li>
-            <li><a href="chessboard.html">Шахматная Доска</a></li>
-            <li><a href="form.html">Работа с формой</a></li>
-            <li><a href="todos.html">Список дел</a></li>
-          </ul>
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div id="todos">
+                <div class="form-wrap">
+                  <label for="input-todo">Напишите что вы хотите запланировать</label><br>
+                  <input id="input-todo" type="text">
+                </div>
+                <button class="button button-primary button-ujarak" id="btn-todo">Тыц</button>
+                <ul class="list list-ordered" id="list-todo"></ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Page Footer-->
@@ -72,6 +73,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/todos.js"></script>
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>

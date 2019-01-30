@@ -1,0 +1,33 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Список дел'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  // Section Todos
+  section.section.section-lg
+    .container
+      .row.justify-content-center
+        .col-lg-6
+          #todos
+            .form-wrap
+              label(for='input-todo') Напишите что вы хотите запланировать
+              br
+              input#input-todo(type='text')
+            button#btn-todo.button.button-primary.button-ujarak Тыц
+
+            ul#list-todo.list.list-ordered
+  // Page Footer
+  include ../sections/_footer-classic
+
+
+block scripts
+  script( src='js/todos.js' )
+
