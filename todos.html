@@ -38,6 +38,7 @@
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="judgment-day.html">Судный день</a></li>
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="for-loop.html">Циклы</a></li>
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="chessboard.html">Шахматная Доска</a></li>
+                      <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="form.html">Работа с формой</a></li>
                       <li class="navbar-dropdown-item"><a class="navbar-dropdown-link" href="todos.html">Список дел</a></li>
                     </ul>
                   </li>
@@ -52,20 +53,31 @@
       <!-- Section Todos-->
       <section class="section section-lg">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
+          <div class="row justify-content-center row-30">
+            <div class="col-lg-4">
               <div id="todos">
                 <div class="form-wrap">
-                  <label for="input-todo">Напишите что вы хотите запланировать</label><br>
-                  <input id="input-todo" type="text">
+                  <label for="input">Напишите что вы хотите запланировать<br>Enter работает</label><br>
+                  <input id="input" type="text">
                 </div>
-                <button class="button button-primary button-ujarak" id="btn-todo">Тыц</button>
-                <ul class="list list-ordered" id="list-todo"></ul>
+                <button class="button button-primary button-ujarak" id="btn">Тыц</button>
+                <ul class="list list-ordered" id="list"></ul>
               </div>
+            </div>
+            <div class="col-lg-6">
+              <h4>Содержимое масива <code>todosArr</code>
+              </h4>
+              <pre id="test"></pre>
             </div>
           </div>
         </div>
       </section>
+      <style>
+        .error {
+          border-color: red;
+        }
+        
+      </style>
       <!-- Page Footer-->
       <footer class="section footer-classic context-dark">
         <div class="container">

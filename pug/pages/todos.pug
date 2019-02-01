@@ -14,16 +14,29 @@ block page
   // Section Todos
   section.section.section-lg
     .container
-      .row.justify-content-center
-        .col-lg-6
+      .row.justify-content-center.row-30
+        .col-lg-4
           #todos
             .form-wrap
-              label(for='input-todo') Напишите что вы хотите запланировать
+              label(for='input') Напишите что вы хотите запланировать
+               br
+               | Enter работает
               br
-              input#input-todo(type='text')
-            button#btn-todo.button.button-primary.button-ujarak Тыц
+              input#input(type='text')
+            button#btn.button.button-primary.button-ujarak Тыц
 
-            ul#list-todo.list.list-ordered
+            ul#list.list.list-ordered
+        .col-lg-6
+          h4 Содержимое масива
+            =" "
+            code todosArr
+          pre#test
+
+  style.
+    .error {
+      border-color: red;
+    }
+
   // Page Footer
   include ../sections/_footer-classic
 
