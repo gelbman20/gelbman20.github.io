@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'home'
+  - var pageName = 'Список дел'
+
+block page
+  // Page Header
+  include ../sections/_header-classic
+
+  // Section Todos
+  section.section.section-lg
+    .container
+      .row.justify-content-center.row-30#todos
+        .col-lg-4
+            .form-wrap
+              label(for='input') Напишите что вы хотите запланировать
+               br
+               | Enter работает
+              br
+              input#input(type='text' v-model="message" @keyup.enter="addItem()")
+            button#btn.button.button-primary.button-ujarak(@click='addItem()') Тыц
+
+            ul#list.list.list-ordered
+              li(v-for='todo in todos') {{todo.desc}}
+                =" "
+                a(href='#' @click='deleteItem(todo)'  @click.prevent :id='todo.id') x
+        .col-lg-6
+          h4 Содержимое масива
+            =" "
+            code todosArr
+          pre#test {{todos}}
+  style.
+    .error {
+      border-color: red;
+    }
+
+  // Page Footer
+  include ../sections/_footer-classic
+
+
+block scripts
+  script( src='js/vue.js' )
+  script( src='js/todos-vue.js' )
+
